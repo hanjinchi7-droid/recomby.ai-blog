@@ -2,7 +2,6 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    
     {
       text: 'Home',
       href: getBlogPermalink(),
@@ -11,16 +10,13 @@ export const headerData = {
     {
       text: 'About',
       href: getPermalink('/about'),
-      
     },
-    
+
     {
-          text: 'Archive',
-          href: getPermalink('/tags'),
+      text: 'Archive',
+      href: getPermalink('/tags'),
     },
-   
   ],
- 
 };
 
 // src/navigation.js

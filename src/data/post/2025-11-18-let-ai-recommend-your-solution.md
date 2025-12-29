@@ -1,7 +1,7 @@
 ---
 publishDate: 2025-11-18T12:00:00Z
 author: zhengyucheng
-title: "Recomby.ai: Get Recommended by AI, Not Left Behind by the Times"
+title: 'Recomby.ai: Get Recommended by AI, Not Left Behind by the Times'
 excerpt: "In the AI Search and Agent Era, Let 'The Best Match' Defeat 'The Loudest Voice'"
 image: ../../assets/images/2025-11-18-let-ai-recommend-your-solution.png
 tags:
@@ -18,6 +18,7 @@ What Recomby.ai does can be summarized in one sentence:
 **In the age of AI search and agents, we help "the best match" defeat "the loudest voice."**
 
 Our two mottos revolve around this:
+
 - **Best Match Defeats the Best**
 - **Where Precision Beats Power**
 
@@ -36,9 +37,11 @@ Over the past two decades, online growth has gone through roughly three waves:
 The most fundamental change isn't that "tools got better" — it's that **how users ask questions has changed**.
 
 In the past, search was "two words + some luck":
+
 - "socks factory," "Christmas gift," "smart lock"
 
 Today's AI search is more like talking to someone who understands:
+
 - "I need a functional sock factory that can do small-batch customization, has compliance certification, stable delivery times, and ideally can give me a rough unit price range."
 - "I want to buy a Christmas gift for a 6-year-old girl, under $50, with some educational value, and not too hard to get."
 

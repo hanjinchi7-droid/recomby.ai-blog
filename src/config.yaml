@@ -11,7 +11,7 @@ metadata:
   title:
     default: Recomby.ai # 修改为你的品牌名
     template: '%s — Recomby.ai' # 修改后缀
-  description: "Recomby.ai - Empowering your projects with AI solutions." # 这里的描述建议根据你的具体业务修改，目前是一个占位符
+  description: 'Recomby.ai - Empowering your projects with AI solutions.' # 这里的描述建议根据你的具体业务修改，目前是一个占位符
   robots:
     index: true
     follow: true
@@ -50,13 +50,13 @@ apps:
 
     category:
       isEnabled: true
-      pathname: 'category' 
+      pathname: 'category'
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'tag' 
+      pathname: 'tag'
       robots:
         index: false
 
