@@ -1,6 +1,6 @@
 site:
   name: Recomby.ai
-  site: 'https://recomby.ai' # 根据你 navigation.js 的 footer 链接修改
+  site: 'https://blog.recomby.ai' # 根据你 navigation.js 的 footer 链接修改
   base: '/'
   trailingSlash: false
 
