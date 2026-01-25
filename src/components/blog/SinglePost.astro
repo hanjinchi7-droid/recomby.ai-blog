@@ -12,13 +12,7 @@ import { getFormattedDate } from '~/utils/utils';
 import type { Post } from '~/types';
 
 export interface Props {
-  post: Post & {
-    headings?: Array<{
-      depth: number;
-      text: string;
-      slug: string;
-    }>;
-  };
+  post: Post;
   url: string | URL;
 }
 

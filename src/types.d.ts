@@ -41,6 +41,13 @@ export interface Post {
   content?: string;
 
   /**  */
+  headings?: Array<{
+    depth: number;
+    text: string;
+    slug: string;
+  }>;
+
+  /**  */
   readingTime?: number;
 }
 

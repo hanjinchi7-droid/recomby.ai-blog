@@ -5,14 +5,6 @@ import type { Post } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
 
-interface PostWithHeadings extends Post {
-  headings?: Array<{
-    depth: number;
-    text: string;
-    slug: string;
-  }>;
-}
-
 const generatePermalink = async ({
   id,
   slug,
@@ -48,7 +40,7 @@ const generatePermalink = async ({
     .join('/');
 };
 
-const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<PostWithHeadings> => {
+const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
   const { id, data } = post;
   const { Content, remarkPluginFrontmatter, headings } = await render(post);
 
