@@ -14,7 +14,7 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
 
 <aside class="toc-container">
   <nav class="toc-nav">
-    <h2 class="toc-title">目录</h2>
+    <h2 class="toc-title">Table of Contents</h2>
     <ul class="toc-list">
       {tocHeadings.map((heading) => (
         <li class={`toc-item depth-${heading.depth}`}>
