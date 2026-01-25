@@ -33,16 +33,12 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
     top: 100px;
     max-height: calc(100vh - 120px);
     overflow-y: auto;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 1rem;
+    border-left: 2px solid #f3f4f6;
   }
 
   :global(.dark) .toc-container {
-    background: rgb(15 23 42);
-    border-color: rgb(51 65 85);
+    border-left-color: rgb(51 65 85);
   }
 
   .toc-title {
@@ -50,7 +46,7 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #6b7280;
+    color: #9ca3af;
     margin-bottom: 1rem;
   }
 
@@ -79,7 +75,7 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
 
   .toc-link {
     display: block;
-    color: #4b5563;
+    color: #9ca3af;
     text-decoration: none;
     padding: 0.25rem 0;
     border-left: 2px solid transparent;
@@ -88,28 +84,28 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
   }
 
   :global(.dark) .toc-link {
-    color: rgb(203 213 225);
+    color: rgb(148 163 184);
   }
 
   .toc-link:hover {
-    color: #1d4ed8;
-    border-left-color: #1d4ed8;
+    color: #6b7280;
+    border-left-color: #6b7280;
   }
 
   :global(.dark) .toc-link:hover {
-    color: rgb(96 165 250);
-    border-left-color: rgb(96 165 250);
+    color: rgb(203 213 225);
+    border-left-color: rgb(203 213 225);
   }
 
   .toc-link.active {
-    color: #1d4ed8;
-    border-left-color: #1d4ed8;
+    color: #4b5563;
+    border-left-color: #4b5563;
     font-weight: 600;
   }
 
   :global(.dark) .toc-link.active {
-    color: rgb(96 165 250);
-    border-left-color: rgb(96 165 250);
+    color: rgb(226 232 240);
+    border-left-color: rgb(226 232 240);
   }
 
   .toc-container::-webkit-scrollbar {
@@ -139,10 +135,10 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
 <script>
   function highlightActiveHeading() {
     const links = document.querySelectorAll('.toc-link');
-    const headings = Array.from(document.querySelectorAll('h2[id], h3[id]'));
+    const headings = Array.from(document.querySelectorAll('h2[id], h3[id]')) as HTMLElement[];
     
     function updateActiveLink() {
-      let currentHeading = null;
+      let currentHeading: HTMLElement | null = null;
       const scrollPos = window.scrollY + 100;
 
       for (const heading of headings) {
