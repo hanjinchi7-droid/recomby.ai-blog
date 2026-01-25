@@ -23,10 +23,11 @@ export function generateOrganizationSchema(): SchemaOrganization {
   };
 }
 
-export function generatePersonSchema(authorName: string): SchemaPerson {
+export function generatePersonSchema(authorName: string, url?: string): SchemaPerson {
   return {
     '@type': 'Person',
     name: authorName,
+    ...(url ? { url } : {}),
   };
 }
 
@@ -36,7 +37,12 @@ export function generateBlogPostingSchema(
   content: string
 ): SchemaBlogPosting {
   const organization = generateOrganizationSchema();
-  const author = post.author ? generatePersonSchema(post.author) : organization;
+  
+  const authorUrl = (post as Post & { authorUrl?: string }).authorUrl;
+  
+  const author = post.author 
+    ? generatePersonSchema(post.author, authorUrl) 
+    : organization;
 
   const image = post.image
     ? typeof post.image === 'string'
