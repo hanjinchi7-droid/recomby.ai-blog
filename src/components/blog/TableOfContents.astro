@@ -133,11 +133,17 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
 </style>
 
 <script>
+  let updateActiveLink: (() => void) | null = null;
+
   document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.toc-link');
     const headings = Array.from(document.querySelectorAll('h2[id], h3[id]')) as HTMLElement[];
     
-    function updateActiveLink() {
+    if (links.length === 0 || headings.length === 0) {
+      return;
+    }
+    
+    updateActiveLink = function() {
       const scrollPos = window.scrollY + 150;
       const viewportHeight = window.innerHeight;
       
@@ -163,20 +169,22 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
         const activeLink = document.querySelector(`.toc-link[href="#${closestHeading.id}"]`);
         activeLink?.classList.add('active');
       }
-    }
+    };
 
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          updateActiveLink();
+          if (updateActiveLink) updateActiveLink();
           ticking = false;
         });
         ticking = true;
       }
     }, { passive: true });
     
-    updateActiveLink();
+    setTimeout(() => {
+      if (updateActiveLink) updateActiveLink();
+    }, 100);
     
     links.forEach(link => {
       link.addEventListener('click', (e) => {
@@ -194,5 +202,11 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
         }
       });
     });
+  });
+
+  document.addEventListener('astro:page-load', () => {
+    setTimeout(() => {
+      if (updateActiveLink) updateActiveLink();
+    }, 200);
   });
 </script>
