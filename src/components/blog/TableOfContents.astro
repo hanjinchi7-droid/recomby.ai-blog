@@ -133,7 +133,7 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
 </style>
 
 <script>
-  function highlightActiveHeading() {
+  document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.toc-link');
     const headings = Array.from(document.querySelectorAll('h2[id], h3[id]')) as HTMLElement[];
     
@@ -157,12 +157,8 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
 
     window.addEventListener('scroll', updateActiveLink);
     updateActiveLink();
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    highlightActiveHeading();
     
-    document.querySelectorAll('.toc-link').forEach(link => {
+    links.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href')?.slice(1);
