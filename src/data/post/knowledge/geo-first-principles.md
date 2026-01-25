@@ -1,9 +1,10 @@
 ---
 publishDate: 2025-12-29T02:00:00Z
+slug: "geo-first-principles"
 author: zhengyucheng
 title: "When Everyone's Chasing the GEO Hype, I Chose to Go Back to First Principles"
 excerpt: "GEO is fundamentally content marketing. What we're really doing is providing high-quality context for AI."
-image: ../../assets/images/geo-first-principles-blog.jpg
+image: ~/assets/images/geo-first-principles-blog.jpg
 tags:
   - GEO
   - Content Marketing
