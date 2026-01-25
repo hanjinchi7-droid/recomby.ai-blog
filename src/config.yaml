@@ -4,7 +4,7 @@ site:
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M # 如果你有新的验证码，记得替换这里
+  googleSiteVerificationId: Mevxr7i9ZnMmj1PNaceavOkuOV2vG58xMhNdCuoqb64 # 如果你有新的验证码，记得替换这里
 
 # Default SEO metadata
 metadata:
