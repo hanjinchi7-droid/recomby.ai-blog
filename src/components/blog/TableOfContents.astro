@@ -138,24 +138,44 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
     const headings = Array.from(document.querySelectorAll('h2[id], h3[id]')) as HTMLElement[];
     
     function updateActiveLink() {
-      let currentHeading: HTMLElement | null = null;
-      const scrollPos = window.scrollY + 100;
-
-      for (const heading of headings) {
-        if (heading.offsetTop <= scrollPos) {
-          currentHeading = heading;
+      const scrollPos = window.scrollY + 150;
+      const viewportHeight = window.innerHeight;
+      
+      let closestHeading: HTMLElement | null = null;
+      let minDistance = Infinity;
+      
+      headings.forEach(heading => {
+        const rect = heading.getBoundingClientRect();
+        const headingTop = rect.top + scrollPos;
+        
+        if (headingTop <= scrollPos + viewportHeight / 2) {
+          const distance = scrollPos - headingTop;
+          if (distance < minDistance && distance >= 0) {
+            minDistance = distance;
+            closestHeading = heading;
+          }
         }
-      }
+      });
 
       links.forEach(link => link.classList.remove('active'));
       
-      if (currentHeading) {
-        const activeLink = document.querySelector(`.toc-link[href="#${currentHeading.id}"]`);
+      if (closestHeading) {
+        const activeLink = document.querySelector(`.toc-link[href="#${closestHeading.id}"]`);
         activeLink?.classList.add('active');
       }
     }
 
-    window.addEventListener('scroll', updateActiveLink);
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveLink();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
     updateActiveLink();
     
     links.forEach(link => {
@@ -164,7 +184,12 @@ const tocHeadings = headings.filter(h => h.depth <= 3);
         const targetId = link.getAttribute('href')?.slice(1);
         const target = document.getElementById(targetId || '');
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const offset = 80;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
           history.pushState(null, '', `#${targetId}`);
         }
       });
