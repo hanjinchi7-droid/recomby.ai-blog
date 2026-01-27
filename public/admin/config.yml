@@ -1,0 +1,75 @@
+# Decap CMS Configuration
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "post"
+    label: "博客文章"
+    folder: "src/data/post/insights"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+
+    fields:
+      - label: "标题"
+        name: "title"
+        widget: "string"
+        required: true
+
+      - label: "发布日期"
+        name: "publishDate"
+        widget: "datetime"
+        required: true
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm:ss"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+
+      - label: "URL Slug"
+        name: "slug"
+        widget: "string"
+        required: true
+        hint: "用于URL的唯一标识符，例如: my-first-post"
+
+      - label: "作者"
+        name: "author"
+        widget: "string"
+        default: "zhengyucheng"
+        required: true
+
+      - label: "摘要"
+        name: "excerpt"
+        widget: "text"
+        required: true
+        hint: "文章简介，显示在列表页"
+
+      - label: "封面图"
+        name: "image"
+        widget: "image"
+        required: false
+        allow_multiple: false
+        hint: "文章封面图片"
+
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        required: false
+        allow_add: true
+        hint: "文章标签，按回车添加"
+
+      - label: "Canonical URL"
+        name: "metadata.canonical"
+        widget: "string"
+        required: false
+        hint: "文章的规范URL地址"
+
+      - label: "正文"
+        name: "body"
+        widget: "markdown"
+        required: true
