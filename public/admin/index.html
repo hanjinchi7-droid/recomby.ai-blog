@@ -15,10 +15,13 @@
 
   <!-- Login redirect script -->
   <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
+    // @ts-ignore - Netlify Identity is loaded via CDN
+    const netlifyIdentity = window.netlifyIdentity;
+
+    if (netlifyIdentity) {
+      netlifyIdentity.on("init", user => {
         if (!user) {
-          window.netlifyIdentity.on("login", () => {
+          netlifyIdentity.on("login", () => {
             document.location.href = "/admin/";
           });
         }
