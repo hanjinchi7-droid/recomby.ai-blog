@@ -16,14 +16,17 @@
   <!-- Login redirect script -->
   <script>
     // @ts-expect-error - Netlify Identity is loaded via CDN
-    window.netlifyIdentity?.on("init", (user) => {
-      if (!user) {
-        // @ts-expect-error - Netlify Identity is loaded via CDN
-        window.netlifyIdentity?.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
+    const identity = window.netlifyIdentity;
+
+    if (identity) {
+      identity.on("init", (user) => {
+        if (!user) {
+          identity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
   </script>
 </body>
 </html>
