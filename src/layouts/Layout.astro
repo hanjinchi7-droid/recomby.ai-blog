@@ -36,9 +36,25 @@ const { language, textDirection } = I18N;
     <SiteVerification />
     <Analytics />
 
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script>
+      // @ts-expect-error - Netlify Identity is loaded via CDN
+      const identity = window.netlifyIdentity;
+
+      if (identity) {
+        identity.on("init", (user) => {
+          if (!user) {
+            identity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+
     <slot name="head" />
 
-    <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
   </head>
 
