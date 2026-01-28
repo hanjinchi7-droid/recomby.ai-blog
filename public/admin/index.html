@@ -15,18 +15,15 @@
 
   <!-- Login redirect script -->
   <script>
-    // @ts-ignore - Netlify Identity is loaded via CDN
-    const netlifyIdentity = window.netlifyIdentity;
-
-    if (netlifyIdentity) {
-      netlifyIdentity.on("init", user => {
-        if (!user) {
-          netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
+    // @ts-expect-error - Netlify Identity is loaded via CDN
+    window.netlifyIdentity?.on("init", (user) => {
+      if (!user) {
+        // @ts-expect-error - Netlify Identity is loaded via CDN
+        window.netlifyIdentity?.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
   </script>
 </body>
 </html>
