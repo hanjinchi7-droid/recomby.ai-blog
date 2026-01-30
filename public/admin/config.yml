@@ -1,12 +1,19 @@
-# Decap CMS Configuration
-
+# 后端配置：使用 Git Gateway 配合 Netlify Identity
 backend:
   name: git-gateway
   branch: main
 
-media_folder: "src/assets/images"
-public_folder: "/assets/images"
+# --- 关键修改：站点链接 ---
+# 这里必须填你的前端博客地址，否则后台无法预览
+site_url: https://blog.recomby.ai
+display_url: https://blog.recomby.ai
 
+# --- 关键修改：图片路径 ---
+# 对应你移动到 public 文件夹后的位置
+media_folder: "public/assets/images" # 图片上传后的物理存储位置
+public_folder: "/assets/images"      # 写入 Markdown 文件的路径字符串
+
+# 内容集合配置
 collections:
   - name: "post"
     label: "博客文章"
@@ -35,7 +42,9 @@ collections:
         name: "slug"
         widget: "string"
         required: true
-        hint: "用于URL的唯一标识符，例如: my-first-post"
+        # 建议加上这个正则限制，防止输入空格或特殊字符导致 URL 报错
+        pattern: ["^[a-z0-9-]+$", "Slug 只能包含小写字母、数字和连字符 (例如: my-first-post)"]
+        hint: "用于URL的唯一标识符"
 
       - label: "作者"
         name: "author"

@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Recomby.ai # 修改 OG 名称
     images:
-      - url: '~/assets/images/default.png' # 建议后续替换成你自己的 OpenGraph 封面图
+      - url: '/assets/images/default.png' # 建议后续替换成你自己的 OpenGraph 封面图
         width: 1200
         height: 628
     type: website
