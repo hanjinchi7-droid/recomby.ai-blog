@@ -9,9 +9,8 @@ site_url: https://blog.recomby.ai
 display_url: https://blog.recomby.ai
 
 # --- 关键修改：图片路径 ---
-# 对应你移动到 public 文件夹后的位置
-media_folder: "public/assets/images" # 图片上传后的物理存储位置
-public_folder: "/assets/images"      # 写入 Markdown 文件的路径字符串
+media_folder: "src/assets/images" # 图片上传后的物理存储位置
+public_folder: "~/assets/images"   # 写入 Markdown 文件的路径字符串（使用 Astro 别名）
 
 # 内容集合配置
 collections:
