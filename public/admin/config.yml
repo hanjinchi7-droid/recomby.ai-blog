@@ -4,9 +4,11 @@ backend:
   branch: main
 
 # --- 关键修改：站点链接 ---
-# 这里必须填你的前端博客地址，否则后台无法预览
+# 前端博客地址（用于预览）
 site_url: https://blog.recomby.ai
 display_url: https://blog.recomby.ai
+# 管理后台地址（可选）
+cms_url: https://admin.recomby.ai
 
 # --- 关键修改：图片路径 ---
 media_folder: "src/assets/images" # 图片上传后的物理存储位置
