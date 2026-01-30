@@ -4,7 +4,7 @@ slug: "let-ai-recommend-your-solution"
 author: zhengyucheng
 title: 'Recomby.ai: Get Recommended by AI, Not Left Behind by the Times'
 excerpt: "In the AI Search and Agent Era, Let 'The Best Match' Defeat 'The Loudest Voice'"
-image: /assets/images/let-ai-recommend-your-solution.png
+image: ~/assets/images/let-ai-recommend-your-solution.png
 tags:
   - AI Search Optimization
   - GEO
