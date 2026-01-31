@@ -3,6 +3,7 @@ backend:
   name: git-gateway
   branch: main
 
+  repo: hanjinchi7-droid/recomby.ai-blog
 # --- 关键修改：站点链接 ---
 # 前端博客地址（用于预览）
 site_url: https://blog.recomby.ai
