@@ -7,6 +7,7 @@ excerpt: Discover why autonomous AI employees with domain knowledge and
   persistent memory outperform rigid automation pipelines. Learn about the
   Skills+Memory architecture that transforms AI from a forgetful intern into a
   senior expert.
+image: ~/assets/images/cover_master.png
 tags:
   - Skills+Memory
 ---
