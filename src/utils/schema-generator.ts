@@ -19,6 +19,8 @@ export function generateOrganizationSchema(): SchemaOrganization {
     sameAs: [
       SEO_CONFIG.social.github,
       SEO_CONFIG.social.reddit,
+      SEO_CONFIG.social.twitter,
+      SEO_CONFIG.social.youtube,
     ].filter(Boolean),
   };
 }

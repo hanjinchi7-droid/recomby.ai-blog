@@ -1,0 +1,164 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Recomby vs Hiring a GEO Specialist + Tools: Same Output, Fraction of the Cost',
+  description:
+    'Hiring a GEO specialist ($4K-8K/mo) plus tool subscriptions ($500+/mo) gets the job done — but costs 50x more than an AI employee that produces the same output for $99/month.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="vs Hiring + Tools"
+  >
+    <Fragment slot="title">
+      Same output.<br />
+      <span class="text-accent dark:text-white highlight">$99 instead of $5,000.</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Hiring a GEO specialist and subscribing to the right tools absolutely works. Research, content, adaptation, tracking — a good person with good tools delivers results.
+      The question is whether you need to spend $5,000+/month to get there.
+    </Fragment>
+  </Hero>
+
+  <!-- Cost breakdown -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-center dark:text-white mb-8">What it costs to build your own GEO operation</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+            <th class="py-4 px-4 text-gray-600 dark:text-gray-400 font-medium">What you need</th>
+            <th class="py-4 px-4 text-center font-medium text-gray-500">Build it yourself</th>
+            <th class="py-4 px-4 text-center font-bold text-primary">AI Employee</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">GEO specialist (part-time or full-time)</td>
+            <td class="py-3 px-4 text-center">$4,000–8,000/mo</td>
+            <td class="py-3 px-4 text-center text-primary" rowspan="5" style="vertical-align: middle;">
+              <span class="text-3xl font-bold">$99</span><br />/month<br /><span class="text-sm text-muted">everything included</span>
+            </td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">AI visibility monitoring tool</td>
+            <td class="py-3 px-4 text-center">$150–500/mo</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Keyword research + writing tools</td>
+            <td class="py-3 px-4 text-center">$150–450/mo</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Your time managing the person</td>
+            <td class="py-3 px-4 text-center">3–5 hours/week</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Hiring process (job post → interviews → onboard)</td>
+            <td class="py-3 px-4 text-center">2–8 weeks</td>
+          </tr>
+          <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+            <td class="py-4 px-4 font-bold">Total</td>
+            <td class="py-4 px-4 text-center font-bold text-red-500">$4,300–9,000/mo + your time</td>
+            <td class="py-4 px-4 text-center font-bold text-primary">$99/mo + 15 min/week</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <Content
+    title="We are not saying it does not work"
+    items={[
+      {
+        title: 'A good GEO specialist with good tools delivers results',
+        description: 'This is the gold standard. A person who understands GEO, uses the right monitoring and writing tools, and dedicates their time to your brand. The output is excellent.',
+        icon: 'tabler:thumb-up',
+      },
+      {
+        title: 'The question is whether you need to pay $5,000+ for it',
+        description: 'Your AI employee does the same work: mines keywords, writes researched articles with 10+ sources, adapts content for each platform, tracks visibility daily, reports results. Same pipeline. Same output quality.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'And whether you have time to manage another person',
+        description: 'A GEO specialist still needs 1-on-1s, task assignment, quality review, performance feedback. Your AI employee sends you a daily report and waits for your article approvals. That is the entire management overhead.',
+        icon: 'tabler:clock',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Cost comparison',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        The output is the same.<br /><span class="text-primary">The cost is 50x less.</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Features2
+    title="What you get for $99/month"
+    subtitle="Everything a GEO specialist + 5 tool subscriptions would give you — in one AI employee."
+    columns={3}
+    items={[
+      {
+        title: 'Keyword mining',
+        description: 'Automated long-tail question discovery across 4 AI engines. Scored by commercial intent and winnability. No separate tool needed.',
+        icon: 'tabler:diamond',
+      },
+      {
+        title: 'Researched articles',
+        description: '3,000+ words, 10+ real sources, expert quotes, data analysis. 4-layer writing system with quality gates. No separate writing tool needed.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'Platform content adaptation',
+        description: 'Your article rewritten in Reddit, X, Medium, LinkedIn native voice. You review and publish. No separate tool needed.',
+        icon: 'tabler:share',
+      },
+      {
+        title: 'Daily visibility tracking',
+        description: '4 AI search engines monitored every day. Citation changes, competitive shifts, new opportunities. No separate monitoring tool needed.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'GEO audit',
+        description: '100-point AI readiness score. Technical checks on robots.txt, schema, content structure. No separate audit tool needed.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Daily reports',
+        description: 'What was done, what changed, what is planned next. Via Telegram. No dashboard to learn, no meeting to attend.',
+        icon: 'tabler:report-analytics',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-slate-800/60"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    title="Why pay $5,000 for what $99 delivers?"
+    subtitle="Same keyword research. Same content quality. Same visibility tracking. Free GEO audit to start."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Free Audit',
+        href: '/geo-audit',
+        icon: 'tabler:search',
+      },
+      {
+        text: 'View Pricing',
+        href: '/pricing',
+      },
+    ]}
+  />
+</Layout>

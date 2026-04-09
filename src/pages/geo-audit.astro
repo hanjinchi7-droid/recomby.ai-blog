@@ -1,0 +1,189 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Free GEO Audit — Check Your AI Search Visibility',
+  description:
+    'Get your free GEO Health Score. We check your robots.txt, schema markup, llms.txt, content structure, and AI crawler access. Score out of 100 with actionable recommendations.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Free GEO Audit"
+  >
+    <Fragment slot="title">
+      How visible is your brand in <span class="text-accent dark:text-white highlight">AI search?</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      The average website scores 13/100 for AI search readiness. Find out where you stand — and get a clear action plan to improve.
+    </Fragment>
+  </HeroText>
+
+  <!-- Audit form -->
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <div class="bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8">
+      <h2 class="text-2xl font-bold text-center dark:text-white mb-2">Get your GEO Health Score</h2>
+      <p class="text-center text-muted dark:text-slate-400 mb-8">Free. No credit card. Results in your inbox.</p>
+
+      <form action="https://api.recomby.ai/geo-audit" method="POST" class="space-y-6">
+        <div>
+          <label for="url" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Website URL</label>
+          <input
+            type="url"
+            id="url"
+            name="url"
+            required
+            placeholder="https://yourwebsite.com"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email (for report delivery)</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@company.com"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent"
+          />
+        </div>
+        <div>
+          <label for="brand" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Brand name (optional)</label>
+          <input
+            type="text"
+            id="brand"
+            name="brand"
+            placeholder="Your Brand"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full py-3 px-6 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors"
+        >
+          Get My Free GEO Score
+        </button>
+        <p class="text-xs text-center text-gray-500 dark:text-gray-400">
+          We'll run the audit manually and send results within 24 hours. No spam. No auto-enrollment.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- What we check -->
+  <Features2
+    title="What does the audit check?"
+    subtitle="We evaluate 6 dimensions of AI search readiness."
+    columns={3}
+    items={[
+      {
+        title: 'AI crawler access',
+        description: 'Can GPTBot, PerplexityBot, ClaudeBot, and GoogleOther crawl your site? If robots.txt blocks them, AI engines cannot cite you.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Schema markup quality',
+        description: 'Are you using Organization, Product, Article, FAQPage, and other schema types? Structured data is how AI engines understand your content.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'llms.txt presence',
+        description: 'Do you have an llms.txt file? This emerging standard tells AI engines what your site is about, similar to how robots.txt guides traditional crawlers.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Content citability',
+        description: 'Are your paragraphs 134-167 words? Are H2s phrased as questions? Are key sections self-contained and extractable? These factors determine whether AI engines cite you.',
+        icon: 'tabler:quote',
+      },
+      {
+        title: 'E-E-A-T signals',
+        description: 'Experience, Expertise, Authoritativeness, Trustworthiness. Do your pages have real author names, publication dates, source citations, and verifiable credentials?',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Technical GEO readiness',
+        description: 'Page speed, canonical tags, meta descriptions, open graph images, mobile rendering. The foundation that everything else depends on.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-slate-800/60"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- What you get -->
+  <Steps
+    title="What happens after you submit?"
+    items={[
+      {
+        title: 'We run the audit (within 24 hours)',
+        description: 'Our AI employee audits your website across all 6 dimensions. No automated one-liner — a real analysis.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'You receive your GEO Health Score',
+        description: 'A score out of 100 with category breakdowns. You will see exactly where you are strong and where you are losing visibility.',
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Actionable recommendations',
+        description: 'The top 5 things you can do right now to improve your AI search visibility. Specific, prioritized, and explained.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Optional: let your AI employee fix it',
+        description: 'If you like what you see, start with Scout ($99/mo) and your AI employee begins implementing the fixes automatically.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Audit questions"
+    columns={1}
+    items={[
+      {
+        title: 'Is the audit really free?',
+        description: 'Yes. No credit card. No auto-enrollment. No sales calls unless you request one. We send you the report and that is it.',
+      },
+      {
+        title: 'How long does it take?',
+        description: 'We deliver results within 24 hours. Most audits are completed within a few hours during business hours (GMT+8).',
+      },
+      {
+        title: 'What is a good GEO score?',
+        description: 'The industry average is 13/100. A score above 40 puts you ahead of most competitors. Above 60 means you are well-positioned for AI search citations. Above 80 is excellent.',
+      },
+      {
+        title: 'Will this work for my industry?',
+        description: 'We have tested across SaaS, e-commerce, fintech, health tech, and professional services. GEO principles apply to any business that wants to be cited in AI-generated answers.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-slate-800/60"></div>
+    </Fragment>
+  </FAQs>
+
+  <CallToAction
+    title="The average site scores 13/100"
+    subtitle="Where do you stand? Find out in 24 hours."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Scroll Up to Submit',
+        href: '#',
+        icon: 'tabler:arrow-up',
+      },
+    ]}
+  />
+</Layout>

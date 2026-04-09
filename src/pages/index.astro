@@ -1,0 +1,266 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Note from '~/components/widgets/Note.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Recomby.ai — Your AI Employee for Generative Engine Optimization (GEO)',
+  description:
+    'AI search engines don\'t rank links — they cite the best match. Recomby.ai builds AI employees that get your brand cited by ChatGPT, Perplexity, Gemini, and Google AI. GEO is the new SEO.',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- ============================================ -->
+  <!-- HERO — Clean, white, the new world           -->
+  <!-- ============================================ -->
+
+  <Hero2
+    tagline="The rules of search have changed."
+    actions={[
+      { variant: 'primary', text: 'Free GEO Audit', href: '/geo-audit' },
+      { text: 'How It Works', href: '/how-it-works' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AI search visualization',
+    }}
+  >
+    <Fragment slot="title">
+      AI doesn't rank links.<br />
+      <span class="text-accent dark:text-white highlight">It cites the best match.</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Users don't type keywords anymore. They describe what they need — and AI recommends <strong>one answer</strong>.
+      Not the biggest brand. The most relevant one. This is <strong>Generative Engine Optimization (GEO)</strong>.
+    </Fragment>
+  </Hero2>
+
+  <!-- One-liner anchor -->
+  <Note
+    icon="tabler:bulb"
+    title="GEO is not a hack."
+    description="It is making your genuine expertise visible to AI — so when it looks for the best answer, it finds you."
+  />
+
+  <!-- ============================================ -->
+  <!-- PARADIGM SHIFT — Dark band = old world ends  -->
+  <!-- ============================================ -->
+
+  <!-- Before vs After: side by side contrast -->
+  <Content
+    id="what-changed"
+    title="What changed?"
+    tagline="The paradigm shift"
+    items={[
+      {
+        title: 'Before: keywords → 10 blue links',
+        description: 'Users typed "best CRM small business." Google returned 10 links ranked by backlinks and ad spend. The biggest brands won. Everyone else fought for page 2.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Now: needs → one AI recommendation',
+        description: 'Users tell ChatGPT: "I need a CRM for my 5-person remote team with async video, under $30/seat." AI searches 500+ pages and cites the best match — by name. Only one brand gets recommended.',
+        icon: 'tabler:message-chatbot',
+      },
+      {
+        title: 'The new rule: biggest → most relevant',
+        description: 'AI doesn\'t care about your ad budget or backlink count. It evaluates one thing: does your content answer this specific question better than anyone else? Recomby.ai makes sure the answer is yes.',
+        icon: 'tabler:trophy',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Search paradigm shift',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Search went from <span class="line-through text-muted">who ranks highest</span> to <span class="text-primary">who answers best</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- ============================================ -->
+  <!-- THREE-SIDED EQUATION — White, bright, clear  -->
+  <!-- ============================================ -->
+
+  <Features2
+    title="AI search is a three-sided equation"
+    subtitle="Two sides are ready. One side is broken — and that's the opportunity."
+    columns={3}
+    items={[
+      {
+        title: 'Users: needs are exploding ✓',
+        description:
+          'Buyers describe specific needs to AI: product type, team size, budget, features. The more specific the query, the better the match — if the right content exists. When it does, users solve their exact problem.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'AI: capability is ready ✓',
+        description:
+          'AI engines search 500-1,000 pages per query. They read, compare, evaluate authority, and recommend. The technology works. When AI finds a great answer, it completes its mission — building user trust.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Businesses: the bottleneck ✗',
+        description:
+          'Most businesses haven\'t structured their expertise for AI. Differentiators, use cases, pricing — locked in PDFs and people\'s heads. Invisible to AI. Fix this, and you get qualified traffic that converts.',
+        icon: 'tabler:alert-triangle',
+      },
+    ]}
+  />
+
+  <!-- ============================================ -->
+  <!-- RECOMBY FIXES IT — Warm accent band          -->
+  <!-- ============================================ -->
+
+  <Content
+    id="solution"
+    title="Recomby.ai fixes the broken side"
+    items={[
+      {
+        title: 'Deep business understanding',
+        description: 'Your AI employee builds a 3-layer profile: your identity, how AI currently sees your market, and where the opportunities are. Not from a phone call — from your actual business data, website, products, and competitive landscape.',
+        icon: 'tabler:user-scan',
+      },
+      {
+        title: 'Content AI engines want to cite',
+        description: 'Articles with 10+ real sources, original analysis, expert quotes, and structured data. A 4-layer writing system designed for AI citation — not generic blog posts. Every article by Recomby.ai makes your expertise visible to AI search engines.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'Autonomous — 15 min/week from you',
+        description: '9 specialized skills. Morning standup, evening report. Keyword mining, content writing, visibility tracking across 4 AI engines, daily reports via Telegram. Your Recomby.ai employee works every day. You review and approve.',
+        icon: 'tabler:robot',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Recomby AI employee',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-orange-950/30"></div>
+    </Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Not a tool. Not an agency.<br /><span class="text-primary">An AI employee with 9 skills.</span>
+      </h3>
+      <p class="text-muted dark:text-slate-400">
+        Recomby.ai is not a dashboard you stare at. It is an AI employee that understands your business, creates GEO-optimized content, and works every day — whether you're at your desk or on vacation.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- ============================================ -->
+  <!-- AGENT COMMERCE — White, future-facing         -->
+  <!-- ============================================ -->
+
+  <Steps
+    title="Where this is going"
+    tagline="The future: Agent Commerce"
+    items={[
+      {
+        title: 'Today: AI recommends your brand',
+        description:
+          'When a user asks "What CRM is best for remote teams?", AI cites the most authoritative source. Recomby.ai\'s GEO employee makes sure that source is you.',
+        icon: 'tabler:message-chatbot',
+      },
+      {
+        title: 'Tomorrow: AI agents buy for their users',
+        description:
+          'AI agents will compare products, negotiate terms, and purchase — without a human visiting your website. Recomby.ai is building open-source protocols (UCP) to make your business agent-ready.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'GEO is the entry ticket',
+        description:
+          'If AI doesn\'t know you exist today, AI agents won\'t buy from you tomorrow. Generative Engine Optimization by Recomby.ai is not optional — it is the foundation for AI-driven commerce.',
+        icon: 'tabler:ticket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Future of AI commerce',
+    }}
+  />
+
+  <!-- ============================================ -->
+  <!-- FAQ — Warm background, education + keywords   -->
+  <!-- ============================================ -->
+
+  <FAQs
+    title="What is GEO and why does it matter?"
+    subtitle="Generative Engine Optimization is new. Here is what business owners need to know."
+    columns={1}
+    items={[
+      {
+        title: 'What is Generative Engine Optimization (GEO)?',
+        description:
+          'GEO is the practice of optimizing your content so AI search engines — ChatGPT, Perplexity, Google AI Overviews, Gemini, and Grok — cite your brand when users ask questions. Unlike traditional SEO which targets link rankings, GEO targets citation in AI-generated answers. Recomby.ai automates the entire GEO process with an autonomous AI employee.',
+      },
+      {
+        title: 'How is GEO different from SEO?',
+        description:
+          'SEO optimizes for Google\'s link-ranking algorithm: backlinks, keyword density, domain authority. GEO optimizes for AI citation: content structure, source authority, answer precision, and structured data. They are complementary — Recomby.ai handles GEO so you can keep your existing SEO strategy.',
+      },
+      {
+        title: 'Why does AI cite some brands and not others?',
+        description:
+          'AI search engines evaluate three things: (1) Does this content directly answer the question? (2) Is it from an authoritative source with real data? (3) Is it structured so AI can extract and quote specific paragraphs? Most businesses fail on all three. Recomby.ai\'s AI employee fixes this systematically.',
+      },
+      {
+        title: 'Is GEO legitimate or is it gaming the system?',
+        description:
+          'Completely legitimate. GEO is making your genuine expertise visible to AI in a format it can process. You are not tricking AI — you are presenting your real differentiators and data. AI engines reward authenticity. Recomby.ai builds on this principle: real research, real sources, real authority.',
+      },
+      {
+        title: 'What is Agent Commerce and why should I care?',
+        description:
+          'Agent Commerce is the next evolution: AI agents that don\'t just recommend products but purchase them on behalf of users. Recomby.ai is building open-source protocols (UCP) to help businesses prepare. GEO is step one — making sure AI knows you exist before agents start buying.',
+      },
+      {
+        title: 'How does the Recomby.ai AI employee work?',
+        description:
+          'Your Recomby.ai AI employee has 9 specialized skills: business profiling, AI search scouting, keyword mining, content writing, image creation, content adaptation, visibility tracking, GEO auditing, and reporting. It works autonomously with morning standup and evening report. You review articles — 15 minutes per week. Starting at $99/month.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-orange-950/30"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Blog -->
+  <BlogLatestPosts
+    title="From the blog"
+    information="How AI search is changing the game — and what Recomby.ai is building to keep you ahead."
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="How visible is your brand in AI search?"
+    subtitle="Get your free GEO Health Score from Recomby.ai. 30 seconds. No credit card required."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Free Audit',
+        href: '/geo-audit',
+        icon: 'tabler:search',
+      },
+      {
+        text: 'See How It Works',
+        href: '/how-it-works',
+      },
+    ]}
+  />
+</Layout>

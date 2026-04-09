@@ -1,0 +1,272 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Pricing',
+  description:
+    'Recomby AI employee pricing: Scout ($99/mo, 4 articles) or Spark ($299/mo, 12 articles). All 9 skills included in both plans. Daily reports, AI visibility tracking, GEO audit — all included.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Pricing"
+  >
+    <Fragment slot="title">
+      One AI employee. <span class="text-accent dark:text-white">Two speeds.</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Both plans get the same AI employee with all 9 skills. Same daily reports. Same AI visibility tracking.
+      The only difference: how many articles per month.
+    </Fragment>
+  </HeroText>
+
+  <Pricing
+    title="Choose your speed"
+    subtitle="No setup fees. Cancel anytime. Free GEO audit before you commit."
+    prices={[
+      {
+        title: 'Scout',
+        subtitle: 'Your first GEO employee',
+        price: 99,
+        period: 'per month',
+        items: [
+          { description: '4 articles per month' },
+          { description: 'All 9 skills included' },
+          { description: 'Daily heartbeat (morning + evening)' },
+          { description: 'Daily report via Telegram' },
+          { description: 'AI visibility tracking (4 engines, daily)' },
+          { description: 'Keyword mining (automatic, batch-based)' },
+          { description: 'Cover images for every article' },
+          { description: 'Content adaptation (Reddit, X, LinkedIn, Medium)' },
+          { description: 'GEO Health Score audit' },
+        ],
+        callToAction: {
+          text: 'Start with Scout',
+          href: '/geo-audit',
+        },
+      },
+      {
+        title: 'Spark',
+        subtitle: 'For brands serious about AI search',
+        price: 299,
+        period: 'per month',
+        items: [
+          { description: '12 articles per month' },
+          { description: 'All 9 skills included' },
+          { description: 'Daily heartbeat (morning + evening)' },
+          { description: 'Daily report via Telegram' },
+          { description: 'AI visibility tracking (4 engines, daily)' },
+          { description: 'Keyword mining (automatic, batch-based)' },
+          { description: 'Cover images for every article' },
+          { description: 'Content adaptation (Reddit, X, LinkedIn, Medium)' },
+          { description: 'GEO Health Score audit' },
+        ],
+        callToAction: {
+          text: 'Start with Spark',
+          href: '/geo-audit',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'best value',
+      },
+    ]}
+  />
+
+  <!-- What's the same -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-center dark:text-white mb-8">Both plans include everything</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+            <th class="py-4 px-4 text-gray-600 dark:text-gray-400 font-medium">Feature</th>
+            <th class="py-4 px-4 text-center font-bold text-primary">Scout $99</th>
+            <th class="py-4 px-4 text-center font-bold text-primary">Spark $299</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Articles per month</td>
+            <td class="py-3 px-4 text-center">4</td>
+            <td class="py-3 px-4 text-center font-bold">12</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Brand Profiler</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Keyword Miner</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">AI Search Scout (4 engines)</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Content Writer</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Image Creator</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Content Distributor</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Visibility Tracker (daily)</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">GEO Auditor</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Report Analyst (daily)</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Morning + evening heartbeat</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-medium">Persistent memory</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Three ways to do GEO -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-center dark:text-white mb-8">Three ways to do GEO — pick one</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+            <th class="py-4 px-4 text-gray-600 dark:text-gray-400 font-medium"></th>
+            <th class="py-4 px-4 text-center font-bold text-primary">Hire an AI Employee</th>
+            <th class="py-4 px-4 text-center font-medium text-gray-500">Buy a Dashboard</th>
+            <th class="py-4 px-4 text-center font-medium text-gray-500">Hire an Agency</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Cost</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">$99–299/mo</td>
+            <td class="py-3 px-4 text-center">$150–500/mo</td>
+            <td class="py-3 px-4 text-center">$2,000+/mo</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">What you get</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">Research + content + tracking + reports</td>
+            <td class="py-3 px-4 text-center">Data and charts</td>
+            <td class="py-3 px-4 text-center">Strategy decks + content (eventually)</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Who does the work?</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">The AI employee</td>
+            <td class="py-3 px-4 text-center">You</td>
+            <td class="py-3 px-4 text-center">A team (on their schedule)</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Time to first output</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">48 hours</td>
+            <td class="py-3 px-4 text-center">Instant (but it's a dashboard)</td>
+            <td class="py-3 px-4 text-center">4–8 weeks</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Works without you?</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; Daily heartbeat</td>
+            <td class="py-3 px-4 text-center text-red-500">&#10007; You drive it</td>
+            <td class="py-3 px-4 text-center text-red-500">&#10007; Needs your input</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-medium">Your time/week</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">15 minutes</td>
+            <td class="py-3 px-4 text-center">5–10 hours</td>
+            <td class="py-3 px-4 text-center">1–2 hours (meetings)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-center text-sm text-muted dark:text-slate-400 mt-6">
+      See how we compare to <a href="/vs/hiring-and-tools" class="text-primary underline">hiring + tools</a> or <a href="/vs/geo-service-provider" class="text-primary underline">GEO service providers</a>.
+    </p>
+  </div>
+
+  <FAQs
+    title="Pricing questions"
+    columns={1}
+    items={[
+      {
+        title: 'What is the difference between Scout and Spark?',
+        description:
+          'Article output. Scout writes 4 articles per month, Spark writes 12. Everything else — all 9 skills, daily tracking, daily reports, heartbeat system, keyword mining, content adaptation — is identical in both plans.',
+      },
+      {
+        title: 'Can I switch plans later?',
+        description: 'Yes. Upgrade or downgrade anytime. Changes take effect on your next billing cycle. No penalties.',
+      },
+      {
+        title: 'What happens after I sign up?',
+        description:
+          'Send us your website URL. Within 24 hours, your AI employee builds a profile of your business, runs a GEO audit, and starts mining keywords. You receive your first article draft within 48 hours.',
+      },
+      {
+        title: 'Why is this so much cheaper than an SEO agency?',
+        description:
+          'Agencies charge for human labor — researchers, writers, account managers. Your AI employee automates the entire pipeline with 9 specialized skills. Lower cost per customer, same output.',
+      },
+      {
+        title: 'Is there a free trial?',
+        description:
+          'We offer a free GEO audit that scores your website\'s AI search readiness. See exactly where you stand before committing to a plan. No credit card required.',
+      },
+      {
+        title: 'Do you offer custom enterprise plans?',
+        description:
+          'Yes. For brands needing more than 12 articles per month or multi-language support, contact us for custom pricing.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-slate-800/60"></div>
+    </Fragment>
+  </FAQs>
+
+  <CallToAction
+    title="Start with a free GEO audit"
+    subtitle="See your AI search visibility score before committing to a plan. No credit card required."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Free Audit',
+        href: '/geo-audit',
+        icon: 'tabler:search',
+      },
+      {
+        text: 'Contact Us',
+        href: 'mailto:contact@recomby.ai',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

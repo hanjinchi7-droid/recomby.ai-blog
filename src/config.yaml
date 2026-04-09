@@ -1,17 +1,17 @@
 site:
   name: Recomby.ai
-  site: 'https://blog.recomby.ai' # 根据你 navigation.js 的 footer 链接修改
+  site: 'https://recomby.ai'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: Mevxr7i9ZnMmj1PNaceavOkuOV2vG58xMhNdCuoqb64 # 如果你有新的验证码，记得替换这里
+  googleSiteVerificationId: Mevxr7i9ZnMmj1PNaceavOkuOV2vG58xMhNdCuoqb64
 
 # Default SEO metadata
 metadata:
   title:
-    default: Recomby.ai # 修改为你的品牌名
-    template: '%s — Recomby.ai' # 修改后缀
-  description: 'Recomby.ai - Empowering your projects with AI solutions.' # 这里的描述建议根据你的具体业务修改，目前是一个占位符
+    default: Recomby.ai
+    template: '%s — Recomby.ai'
+  description: 'Your AI employee for Generative Engine Optimization (GEO). 9 specialized skills that get your brand cited by ChatGPT, Perplexity, Gemini, and Google AI. Starting at $99/month.'
   robots:
     index: true
     follow: true
@@ -44,7 +44,7 @@ apps:
 
     list:
       isEnabled: true
-      pathname: '/' # 这里保留原样。但在你的 nav 中 Blog 单独有链接，如果主页不是博客列表，这里可能需要改为 'blog'
+      pathname: 'blog'
       robots:
         index: true
 

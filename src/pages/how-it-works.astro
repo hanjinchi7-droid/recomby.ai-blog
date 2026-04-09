@@ -1,0 +1,324 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'Meet Your AI Employee — 9 Skills, Zero Busywork',
+  description:
+    'Recomby is not an AI agent you prompt. It is an AI employee with 9 specialized skills that works autonomously — mines keywords, writes articles, publishes content, and monitors your AI visibility. You review. It delivers.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero: The core distinction -->
+  <Hero
+    tagline="Not an agent. An employee."
+  >
+    <Fragment slot="title">
+      Meet Your AI Employee.<br />
+      <span class="text-accent dark:text-white highlight">9 Skills. Works While You Sleep.</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Every AI company sells you an agent — a tool you prompt, manage, and babysit.
+      We hired you an employee. It has a morning standup, an evening report, and 9 specialized skills.
+      You review its work. That's it.
+    </Fragment>
+  </Hero>
+
+  <!-- Section 1: Agent vs Employee — the core argument -->
+  <Content
+    title="What's the difference between an AI agent and an AI employee?"
+    items={[
+      {
+        title: 'An agent waits for your command',
+        description: 'You write a prompt. It runs once. It forgets everything. Next time, you start from zero. You are the manager, the planner, and the quality checker.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'An employee shows up and works',
+        description: 'It knows your business (geo-collector built a 3-layer profile). It remembers what worked and what failed (persistent memory). It plans its own day (morning standup). It reports results (evening report). You review and approve.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'The real test: what happens when you go on vacation?',
+        description: 'Your AI agent stops. Nobody prompts it. Your AI employee keeps working — mining keywords, tracking visibility, flagging issues. It sends you a weekly report. You read it by the pool.',
+        icon: 'tabler:beach',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AI employee working autonomously',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Agents are tools. <span class="text-primary">Employees deliver outcomes.</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Section 2: The Employee Resume — 9 Skills -->
+  <Features2
+    title="Your AI employee's skill set"
+    subtitle="9 specialized skills, each with its own professional playbook. Not generic prompts — deep domain expertise in GEO."
+    columns={3}
+    items={[
+      {
+        title: 'Brand Profiler',
+        description:
+          'Builds a 3-layer intelligence profile of your business: identity, market reality, and value gaps. Interviews you or reads your website — then maps exactly where you can win in AI search.',
+        icon: 'tabler:user-scan',
+      },
+      {
+        title: 'AI Search Scout',
+        description:
+          'Queries ChatGPT, Perplexity, Gemini, and Grok simultaneously. Sees who AI recommends today, where answers are weak, and where your competitors appear. Real-time competitive intelligence.',
+        icon: 'tabler:radar-2',
+      },
+      {
+        title: 'Keyword Miner',
+        description:
+          'Finds the exact long-tail questions your buyers ask AI. Scores each by commercial intent, client fit, AI winnability, and content feasibility. Only high-value questions survive.',
+        icon: 'tabler:diamond',
+      },
+      {
+        title: 'Content Writer',
+        description:
+          'A 4-layer writing system: original insights, Toulmin argumentation chains, anti-AI structural patterns, and GEO compliance. Research-first — every article has 10+ real sources, expert quotes, and data.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'Image Creator',
+        description:
+          'Generates cover images for every article. 14 aspect ratios, brand-consistent presets, automatic platform sizing. One master image becomes 8 platform-ready versions.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Content Adapter',
+        description:
+          'Rewrites each article for Reddit, X, Medium, and LinkedIn in each platform\'s native voice. You review the adapted versions and publish them yourself. Not copy-paste — genuine rewrites.',
+        icon: 'tabler:share',
+      },
+      {
+        title: 'Visibility Tracker',
+        description:
+          'Monitors 4 AI search engines daily (ChatGPT, Perplexity, Gemini, Grok). Tracks whether your brand is being cited more, less, or the same. Catches competitive shifts before they become problems.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'GEO Auditor',
+        description:
+          'Scores your website\'s AI-readiness on a 100-point scale. Checks robots.txt, schema.org, content freshness, and 20+ technical factors that affect whether AI engines can find and cite your content.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Report Analyst',
+        description:
+          'Generates clear, business-language reports: what improved, what to do next, and where the opportunities are. Every number cross-verified against real data. No jargon, no dashboards to learn — just actionable insights delivered to you.',
+        icon: 'tabler:report-analytics',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-slate-800/60"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Section 3: A Day in the Life -->
+  <Steps
+    title="A day in your AI employee's life"
+    tagline="Autonomous. Every day. No prompting required."
+    items={[
+      {
+        title: 'Morning Standup (auto)',
+        description:
+          'Reads yesterday\'s results, checks the weekly plan, identifies today\'s highest-priority tasks. If something needs your decision, it asks. Otherwise, it starts working.',
+        icon: 'tabler:sunrise',
+      },
+      {
+        title: 'Workday: Research → Write → Adapt',
+        description:
+          'Mines new keyword opportunities, researches topics with real data, writes articles with original insights, generates cover images, adapts content for each platform. Strict dependency chain — no skipping steps.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Continuous: Track AI Visibility',
+        description:
+          'Between content tasks, monitors how AI search engines mention your brand. Catches citation changes, competitor movements, and new opportunities.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Evening Report (auto)',
+        description:
+          'Summarizes what was accomplished, what failed, what it costs, and what\'s planned for tomorrow. Weekly and monthly reports aggregate automatically.',
+        icon: 'tabler:moon',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AI employee daily routine',
+    }}
+  />
+
+  <!-- Section 4: What makes this an employee, not an agent -->
+  <Content
+    isReversed
+    title="5 things agents can't do"
+    items={[
+      {
+        title: 'Remember what worked and what failed',
+        description: 'Persistent memory across sessions. Lessons learned are never deleted. Client preferences and landmines are tracked forever.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Plan its own workweek',
+        description: 'OKR cascade from quarterly goals to daily tasks. Morning standup auto-generates the day\'s plan. No human scheduling required.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Pick up where it left off',
+        description: 'Checkpoint-based recovery. If a session is interrupted mid-task, the next session reads the checkpoint and resumes — no lost work, no duplicate effort.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Know when to ask and when to act',
+        description: 'Four permission levels: auto-execute for research and drafts, confirm-first for publishing and strategy changes. It knows the difference.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Run in a secure sandbox',
+        description: 'Each client runs in an isolated container. Your data is invisible to other clients. Credentials never enter the AI\'s context — routed through a secure vault.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AI employee capabilities',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        An agent follows instructions.<br /><span class="text-primary">An employee owns outcomes.</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Section 5: Your involvement -->
+  <Stats
+    title="Your total involvement"
+    stats={[
+      { amount: '15', title: 'Minutes / Week', icon: 'tabler:clock' },
+      { amount: '1', title: 'Thing You Do: Review', icon: 'tabler:eye-check' },
+      { amount: '0', title: 'Prompts to Write', icon: 'tabler:keyboard' },
+    ]}
+  />
+
+  <!-- Section 6: How the pipeline works -->
+  <Steps
+    title="How content goes from zero to AI citation"
+    tagline="The pipeline"
+    isReversed
+    items={[
+      {
+        title: '1. Profile your business',
+        description:
+          'Brand Profiler builds a 3-layer context: who you are, how AI currently sees your category, and where the gaps are. This is the foundation everything else depends on.',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: '2. Find what buyers ask AI',
+        description:
+          'Keyword Miner + AI Search Scout discover the exact questions your target customers type into ChatGPT and Perplexity. Scored by commercial value, not vanity metrics.',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: '3. Write articles AI wants to cite',
+        description:
+          'Content Writer researches each topic with real data, expert quotes, and community pain points — then produces 3,000+ word articles with original insights. Cover images auto-generated.',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: '4. Publish everywhere that matters',
+        description:
+          'Content Adapter adapts each article for your website, Reddit, X, Medium, and LinkedIn. Platform-native voice, not copy-paste. Compliance-checked.',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: '5. Track, audit, report',
+        description:
+          'Visibility Tracker monitors daily. GEO Auditor checks technical readiness. Report Analyst compiles everything into actionable reports. The cycle repeats.',
+        icon: 'tabler:number-5',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Content pipeline',
+    }}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Common questions"
+    columns={1}
+    items={[
+      {
+        title: 'How is this different from ChatGPT or Claude?',
+        description:
+          'ChatGPT and Claude are general-purpose AI assistants. You prompt them, they respond, they forget. Recomby\'s AI employee is purpose-built for one job: getting your brand cited by AI search engines. It has 9 specialized skills, persistent memory, daily work routines, and runs autonomously.',
+      },
+      {
+        title: 'What if the AI writes something wrong about my business?',
+        description:
+          'Every article goes through your review before publishing. The AI employee asks for confirmation (L3 permission) before any public-facing action. You have full editorial control.',
+      },
+      {
+        title: 'Can I give it specific topics to write about?',
+        description:
+          'Yes. While it identifies opportunities automatically, you can add topics to the queue anytime. Your priorities override automated suggestions.',
+      },
+      {
+        title: 'What does "autonomous" actually mean?',
+        description:
+          'It means the AI employee has a morning standup and evening report. It plans its own tasks based on your quarterly goals. It runs keyword research, writes content, and monitors visibility without you prompting it. If it needs a decision, it asks. Otherwise, it works.',
+      },
+      {
+        title: 'Is my data safe?',
+        description:
+          'Each client runs in an isolated Linux container. Your business data, keywords, and content are invisible to other clients. API credentials route through a secure vault — the AI never sees raw keys.',
+      },
+      {
+        title: 'How long until AI engines start citing my brand?',
+        description:
+          'Most brands see initial citations within 14-30 days of publishing optimized content. Full visibility improvements typically take 60-90 days as AI engines re-index and build trust.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-slate-800/60"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- CTA -->
+  <CallToAction
+    title="See how AI-ready your brand is"
+    subtitle="Free GEO Health Score. 30 seconds. No credit card."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Free Audit',
+        href: '/geo-audit',
+        icon: 'tabler:search',
+      },
+      {
+        text: 'View Pricing',
+        href: '/pricing',
+      },
+    ]}
+  />
+</Layout>

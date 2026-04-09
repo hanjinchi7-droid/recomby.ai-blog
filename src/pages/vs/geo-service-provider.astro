@@ -1,0 +1,219 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Recomby vs GEO Service Providers: Your Business Needs an Insider, Not an Outsider',
+  description:
+    'GEO agencies learn your business from a phone call. Your AI employee lives inside your business data. The difference shows up in content quality — and whether AI engines actually cite you.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="vs GEO Service Providers"
+  >
+    <Fragment slot="title">
+      An outsider writes marketing copy.<br />
+      <span class="text-accent dark:text-white highlight">An insider writes expert content.</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      GEO is authority building. AI engines only cite content that demonstrates real expertise.
+      The question is: who understands your business deeply enough to write that content?
+    </Fragment>
+  </Hero>
+
+  <!-- The core problem -->
+  <Content
+    title="Why most GEO services produce content AI ignores"
+    items={[
+      {
+        title: 'They learn your business from a phone call',
+        description: 'A 45-minute kickoff call. A few follow-up emails. That is the depth of understanding a service provider has of your business, your customers, your competitors, and what makes you different. They take notes, then write generic content that could be about any company in your industry.',
+        icon: 'tabler:phone-off',
+      },
+      {
+        title: 'AI engines can tell the difference',
+        description: 'AI search engines evaluate authority. Content written by someone who truly understands the domain — with specific data, real differentiators, genuine industry insights — gets cited. Surface-level marketing copy does not. A service provider writing for 50 clients at once cannot go deep on any of them.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'You are paying them to use AI anyway',
+        description: 'Most agencies and GEO service providers use AI tools to produce your content — they just charge you agency rates for it. You are paying $2,000-10,000/month for someone to prompt ChatGPT with a shallow understanding of your business.',
+        icon: 'tabler:receipt-2',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Agency meeting',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Shallow understanding produces shallow content.<br /><span class="text-primary">AI does not cite shallow content.</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- What's different about an AI employee -->
+  <Content
+    isReversed
+    title="Your AI employee is an insider, not an outsider"
+    items={[
+      {
+        title: 'It lives inside your business data',
+        description: 'You feed it your website, product docs, pricing, customer profiles, competitor analysis — everything. It builds a 3-layer profile: who you are, how AI currently sees your market, and where the gaps are. This is not a phone call summary. This is deep context that informs every article it writes.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'It writes from your perspective',
+        description: 'Because it knows your differentiators, your target customer, and your competitive moat, the content it produces has real substance. Specific data. Genuine insights. The kind of content that AI engines recognize as authoritative and choose to cite.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'The profile gets richer over time',
+        description: 'Every article written, every keyword mined, every visibility report — your AI employee learns what works for your specific business. A service provider starts from scratch every quarter. Your AI employee compounds knowledge.',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Deep business understanding',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        You are the domain expert.<br /><span class="text-primary">Your AI employee is the GEO expert.</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- You stay in control -->
+  <Features2
+    title="You stay in control"
+    subtitle="Unlike a service provider where you wait for deliverables and hope for the best — you see everything, approve everything, and own everything."
+    columns={3}
+    items={[
+      {
+        title: 'You review every article before it goes live',
+        description: 'No surprises. Every piece of content goes through your approval. You are the domain expert — you catch anything the AI gets wrong. Zero communication friction: read, edit, approve. Done.',
+        icon: 'tabler:eye-check',
+      },
+      {
+        title: 'Zero meetings, zero back-and-forth',
+        description: 'No kickoff calls. No weekly syncs. No "let me get back to you on that." Your AI employee reports via Telegram daily. You respond when you want. The entire interaction is async and on your terms.',
+        icon: 'tabler:message-off',
+      },
+      {
+        title: 'Your data stays yours',
+        description: 'Each client runs in an isolated container. Your business data, competitive intelligence, and content strategy are invisible to anyone else. For enterprise needs, we offer custom deployment — your own infrastructure, your own keys, complete data sovereignty.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-slate-800/60"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Side by side -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-center dark:text-white mb-8">The real comparison</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+            <th class="py-4 px-4 text-gray-600 dark:text-gray-400 font-medium"></th>
+            <th class="py-4 px-4 text-center font-bold text-primary">Your AI Employee</th>
+            <th class="py-4 px-4 text-center font-medium text-gray-500">GEO Service Provider</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Understands your business</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">Deep (3-layer profile, growing)</td>
+            <td class="py-3 px-4 text-center">Shallow (phone call notes)</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Content quality</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">Expert content from your perspective</td>
+            <td class="py-3 px-4 text-center">Generic content that fits any competitor</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Your control over output</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; Review and approve everything</td>
+            <td class="py-3 px-4 text-center">Wait for deliverables, give feedback, wait again</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Communication overhead</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">Telegram daily report, async</td>
+            <td class="py-3 px-4 text-center">Calls, emails, Slack, meetings</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Who actually writes the content?</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">AI with deep business context</td>
+            <td class="py-3 px-4 text-center">AI with shallow context (at agency prices)</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Data privacy</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; Isolated container, custom deployment available</td>
+            <td class="py-3 px-4 text-center">Shared tools, shared team, shared risk</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Cost</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">$99–299/mo</td>
+            <td class="py-3 px-4 text-center">$2,000–10,000/mo</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-medium">Time to first article</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">48 hours</td>
+            <td class="py-3 px-4 text-center">4–8 weeks</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <FAQs
+    title="Common questions"
+    columns={1}
+    items={[
+      {
+        title: 'Can an AI really understand my business as well as a human consultant?',
+        description:
+          'For GEO content production — yes. You provide the raw materials: your website, product docs, customer data, competitive positioning. The AI employee structures this into a deep profile and uses it for every piece of content. A consultant spends 80% of their time learning what you already know. Your AI employee spends 100% of its time executing.',
+      },
+      {
+        title: 'What if I already have a GEO agency?',
+        description:
+          'Ask them one question: are they using AI to write your content? If yes, you are paying agency overhead for AI output. If no, ask how they plan to produce content at the speed AI search requires. Either way, try a free GEO audit and compare the output quality.',
+      },
+      {
+        title: 'Can I customize the deployment for my company?',
+        description:
+          'Yes. For enterprise needs, we offer custom deployment: your own infrastructure, your own API keys, complete data isolation. Your competitive intelligence never leaves your environment.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    title="Stop paying outsiders to guess about your business"
+    subtitle="Give your AI employee the full picture. It does the rest. Free GEO audit to start."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Free Audit',
+        href: '/geo-audit',
+        icon: 'tabler:search',
+      },
+      {
+        text: 'View Pricing',
+        href: '/pricing',
+      },
+    ]}
+  />
+</Layout>

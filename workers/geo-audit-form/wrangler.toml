@@ -1,0 +1,17 @@
+name = "geo-audit-form"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+routes = [
+  { pattern = "api.recomby.ai/geo-audit", zone_name = "recomby.ai" }
+]
+
+workers_dev = true
+
+[vars]
+NOTIFY_EMAIL = "zhengyucheng0504@gmail.com"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "geo-audit-submissions"
+database_id = "8e1f9e05-6510-4bfe-a376-5c2276f44f78"

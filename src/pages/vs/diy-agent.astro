@@ -1,0 +1,191 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Recomby vs DIY with AI Agents: You Know Your Business, But Do You Know GEO?',
+  description:
+    'Using ChatGPT or Claude to do GEO yourself? You know your business, but GEO has its own rules — citation structure, source density, engine-specific optimization. Your AI employee knows both.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="vs DIY with AI Agents"
+  >
+    <Fragment slot="title">
+      You know your business.<br />
+      <span class="text-accent dark:text-white highlight">But GEO has its own rules.</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      You can prompt ChatGPT to write an article about your product. But will AI search engines cite it?
+      GEO is not just writing — it is a system of keyword mining, citation structure, source density, engine-specific optimization, and continuous tracking. Prompting alone does not get you there.
+    </Fragment>
+  </Hero>
+
+  <!-- What you miss doing it yourself -->
+  <Content
+    title="What goes wrong when you DIY with AI agents"
+    items={[
+      {
+        title: 'No memory — every session starts from zero',
+        description: 'You open ChatGPT. You explain your business again. You describe your competitors again. You paste your product info again. Every single time. An AI employee remembers everything from day one — your profile, your keywords, what worked, what failed.',
+        icon: 'tabler:eraser',
+      },
+      {
+        title: 'No GEO methodology — just prompting and hoping',
+        description: 'GEO-optimized content needs specific structure: question-format H2s, 134-167 word citation paragraphs, 10+ authoritative sources, schema markup, FAQ sections. Do you know these rules? Do you check them every time? Your AI employee has a 4-layer writing system that enforces them automatically.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'No pipeline — you are the glue',
+        description: 'You research keywords manually. You write content in one tool. You find images somewhere else. You publish by hand. You check visibility... when you remember to. There is no system. When you get busy, GEO stops. Your AI employee runs a pipeline: mine → write → adapt → track → report. Every day. Without you.',
+        icon: 'tabler:puzzle',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Person prompting AI',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        A prompt produces text.<br /><span class="text-primary">A system produces citations.</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- What the AI employee brings -->
+  <Content
+    isReversed
+    title="What 9 specialized skills give you that prompting doesn't"
+    items={[
+      {
+        title: 'Keyword mining that finds what buyers actually ask AI',
+        description: 'Not guessing what to write about. geo-miner queries 4 AI engines, runs autocomplete analysis, scrapes community questions, and scores each by commercial intent and AI winnability. You get the exact questions worth answering.',
+        icon: 'tabler:diamond',
+      },
+      {
+        title: 'A writing system, not a writing prompt',
+        description: '4 layers: original insight generation, Toulmin argumentation chains (claim → evidence → warrant → so what), anti-AI structural patterns, and GEO compliance checks. Each article has 10+ real sources, expert quotes, and data. This is not "write me a blog post about X."',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'Continuous tracking — not a one-time check',
+        description: 'Your AI employee checks 4 AI search engines every day to see if your brand is being cited. Not once a month when you remember. Every day. If a competitor starts getting cited where you used to, you know immediately.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Quality gates you would never enforce yourself',
+        description: 'Every article is verified: statistics traced to sources, no fabricated quotes, compliance checked, schema markup generated. When you DIY at 11 PM, you skip these steps. Your AI employee never skips them.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Systematic pipeline',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        You bring the business expertise.<br /><span class="text-primary">Your AI employee brings the GEO expertise.</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Side by side -->
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-center dark:text-white mb-8">The real comparison</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+            <th class="py-4 px-4 text-gray-600 dark:text-gray-400 font-medium"></th>
+            <th class="py-4 px-4 text-center font-bold text-primary">Your AI Employee</th>
+            <th class="py-4 px-4 text-center font-medium text-gray-500">DIY with AI Agents</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Business knowledge</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; Your profile, always loaded</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; You know it (but re-explain every time)</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">GEO methodology</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">9 skills, 4-layer writing, quality gates</td>
+            <td class="py-3 px-4 text-center text-red-500">&#10007; You learn as you go</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Memory</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; Persistent across sessions</td>
+            <td class="py-3 px-4 text-center text-red-500">&#10007; Starts fresh every time</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Pipeline</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; Mine → write → distribute → track → report</td>
+            <td class="py-3 px-4 text-center text-red-500">&#10007; You are the pipeline</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Runs when you are busy</td>
+            <td class="py-3 px-4 text-center text-green-600 font-bold">&#10003; Daily heartbeat</td>
+            <td class="py-3 px-4 text-center text-red-500">&#10007; Stops when you stop</td>
+          </tr>
+          <tr class="border-b border-gray-100 dark:border-gray-800">
+            <td class="py-3 px-4 font-medium">Content quality consistency</td>
+            <td class="py-3 px-4 text-center text-green-600">&#10003; Same standard every article</td>
+            <td class="py-3 px-4 text-center">Depends on your prompt that day</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-medium">Your time/week</td>
+            <td class="py-3 px-4 text-center font-bold text-primary">15 minutes (review)</td>
+            <td class="py-3 px-4 text-center">5-15 hours (prompt, manage, publish)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <FAQs
+    title="Common questions"
+    columns={1}
+    items={[
+      {
+        title: 'I am already good at prompting AI — why do I need this?',
+        description:
+          'Prompting is one step. GEO is a system: keyword research → competitive analysis → structured writing → schema markup → platform adaptation → daily tracking → reporting. Being good at prompting is like being good at hammering — it does not make you a carpenter.',
+      },
+      {
+        title: 'Can I use my existing ChatGPT / Claude subscription alongside Recomby?',
+        description:
+          'Of course. Use them for everything else. Use your AI employee for GEO. It is purpose-built with 9 specialized skills, persistent memory, and daily work routines that a general-purpose AI assistant does not have.',
+      },
+      {
+        title: 'What if I want to control the content more closely?',
+        description:
+          'You control everything. Every article goes through your approval before publishing. You can add specific topics, adjust the writing direction, and provide feedback that your AI employee remembers permanently. You are the domain expert — you set the direction.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    title="Let the expert handle GEO"
+    subtitle="You focus on your business. Your AI employee focuses on getting you cited. Free GEO audit to start."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Free Audit',
+        href: '/geo-audit',
+        icon: 'tabler:search',
+      },
+      {
+        text: 'View Pricing',
+        href: '/pricing',
+      },
+    ]}
+  />
+</Layout>

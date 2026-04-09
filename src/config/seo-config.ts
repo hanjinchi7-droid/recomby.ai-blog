@@ -1,30 +1,26 @@
 export const SEO_CONFIG = {
-  // 网站基础信息
   site: {
     name: 'Recomby.ai',
-    url: 'https://blog.recomby.ai',
-    description: 'Get Recommended by AI, Not Left Behind by the Times',
+    url: 'https://recomby.ai',
+    description: 'Your AI employee for Generative Engine Optimization (GEO). 9 specialized skills that get your brand cited by ChatGPT, Perplexity, Gemini, and Google AI. Not a dashboard — an autonomous AI employee that works every day.',
     email: 'contact@recomby.ai',
   },
 
-  // AI爬虫配置
   aiCrawlers: {
-    // 允许的AI爬虫
     allowed: [
-      'GPTBot',           // OpenAI
+      'GPTBot',
       'ChatGPT-User',
-      'ClaudeBot',        // Anthropic
+      'ClaudeBot',
       'Claude-Web',
-      'Google-Extended',  // Google Gemini
+      'Google-Extended',
+      'GoogleOther',
       'Perplexitybot',
       'PerplexityBot',
       'Amazonbot',
       'Applebot-Extended',
       'FacebookBot',
-      'Bytespider',       // ByteDance
+      'Bytespider',
     ],
-    
-    // 禁止的爬虫
     blocked: [
       'AhrefsBot',
       'SemrushBot',
@@ -33,25 +29,33 @@ export const SEO_CONFIG = {
     ],
   },
 
-  // 内容区域
   contentAreas: {
-    blog: {
+    home: {
       path: '/',
-      description: 'In-depth articles about GEO, AI Search, and content marketing',
+      description: 'Why GEO matters — AI search cites the best match, not the biggest brand. Recomby.ai builds AI employees to make your expertise visible to AI.',
     },
-    about: {
-      path: '/about',
-      description: 'About Recomby.ai and our mission',
+    pricing: {
+      path: '/pricing',
+      description: 'Two plans: Scout ($99/month, 4 articles) and Spark ($299/month, 12 articles). All 9 skills included in both.',
     },
-    tags: {
-      path: '/tags',
-      description: 'Browse articles by topics',
+    howItWorks: {
+      path: '/how-it-works',
+      description: 'Meet your AI employee — 9 specialized skills: profiling, keyword mining, content writing, image creation, content adaptation, visibility tracking, GEO auditing, and reporting.',
+    },
+    geoAudit: {
+      path: '/geo-audit',
+      description: 'Free GEO Health Score — check your AI search readiness on a 100-point scale',
+    },
+    blog: {
+      path: '/blog',
+      description: 'Articles about Generative Engine Optimization, AI search, and Agent Commerce',
     },
   },
 
-  // 社交链接
   social: {
-    github: 'https://github.com/hanjinchi7-droid/Generative-Engine-Optimization-GEO-blog-template',
+    github: 'https://github.com/recomby-ai/ucp-onboard',
     reddit: 'https://www.reddit.com/r/recomby_ai/',
+    twitter: 'https://x.com/recomby_ai',
+    youtube: 'https://youtube.com/@recomby-ai',
   },
 };
