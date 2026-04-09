@@ -11,7 +11,7 @@ tags:
   - AIO
   - Agent API
 metadata:
-  canonical: https://recomby.ai/
+  canonical: https://recomby.ai/let-ai-recommend-your-solution
 ---
 
 What Recomby.ai does can be summarized in one sentence:

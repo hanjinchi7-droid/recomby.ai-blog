@@ -11,7 +11,7 @@ tags:
   - First Principles
   - AI Search
 metadata:
-  canonical: https://recomby.ai/
+  canonical: https://recomby.ai/geo-first-principles
 ---
 
 GEO (Generative Engine Optimization) is the buzzword of the moment. I've been deep in the research myself—the market is flooded with flashy products: AI agents, AI search detection tools, analytics dashboards, llms.txt generators. Each one looks impressive, each one promises to be "the future".
